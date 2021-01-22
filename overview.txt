@@ -1,0 +1,17 @@
+Funcionalidades desenvolvidas:
+
+Endpoints:
+  * Gerador de CSV (pedido no teste)
+  * Listagem de Pets (pedido no teste)
+  * Detalhes de Pets
+  * Criação de Pets (pedido no teste)
+  * Listagem de prontuários de um pet (pedido no teste)
+  * Criação de prontuário através de um pet (pedido no teste)
+  * Remoção de um prontuário a partir de um pet (pedido no teste)
+  * Entre outras
+
+Problemas e melhorias:
+  * O CSV não foi construido a partir de uma rake task pois não consegui passar os parâmetros para a
+  minha custom task a partir do controller, por este motivo fiz utilizando um service.
+  * Os testes não foram implementados porque foquei em entregar mais funcionalidades na API. Mas eles
+  sem dúvida deveriam ser desenvolvidos.

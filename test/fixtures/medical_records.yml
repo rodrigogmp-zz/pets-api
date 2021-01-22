@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pet: one
+  symptoms: MyText
+  applied_treatment: MyText
+
+two:
+  pet: two
+  symptoms: MyText
+  applied_treatment: MyText
