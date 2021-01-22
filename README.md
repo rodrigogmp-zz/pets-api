@@ -1,24 +1,13 @@
-# README
+# A simple Pets API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version (2.7.1)
 
-Things you may want to cover:
+* System dependencies (bundle)
 
-* Ruby version
+* Configuration (create config/database.yml following config/database.yml.example)
 
-* System dependencies
+* Database creation (rails db:create)
 
-* Configuration
+* Database initialization (rails db:migrate and rails db:seed to populate database)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run application (rails s)
