@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "b5068cd5-8cf4-4f12-8a3d-ca980ea3ec2c",
+		"name": "pets-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Medical Records",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_dev}}/api/v1/pets/1/medical_records?symptoms=unde&applied_treatment=labor&page=2&per_page=3",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pets",
+										"1",
+										"medical_records"
+									],
+									"query": [
+										{
+											"key": "symptoms",
+											"value": "unde"
+										},
+										{
+											"key": "applied_treatment",
+											"value": "labor"
+										},
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "per_page",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"symptoms\": \"sintomas 11\",\n    \"applied_treatment\": \"algum tratamento 22\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/api/v1/pets/1/medical_records",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pets",
+										"1",
+										"medical_records"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url_dev}}/api/v1/pets/1/medical_records/1",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pets",
+										"1",
+										"medical_records",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pets List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_dev}}/api/v1/pets?name=Bub&kind=dog&breed=Poodle&page=2&per_page=3",
+							"host": [
+								"{{url_dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pets"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Bub"
+								},
+								{
+									"key": "kind",
+									"value": "dog"
+								},
+								{
+									"key": "breed",
+									"value": "Poodle"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "per_page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Bob",
+									"type": "text"
+								},
+								{
+									"key": "breed",
+									"value": "Golden Retriever",
+									"type": "text"
+								},
+								{
+									"key": "kind",
+									"value": "dog",
+									"type": "text"
+								},
+								{
+									"key": "birthday_date",
+									"value": "01/01/2021",
+									"type": "text"
+								},
+								{
+									"key": "medical_records_attributes[][symptoms]",
+									"value": "sintomas",
+									"type": "text"
+								},
+								{
+									"key": "medical_records_attributes[][applied_treatment]",
+									"value": "tratamento aplicado",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_dev}}/api/v1/pets",
+							"host": [
+								"{{url_dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pet Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_dev}}/api/v1/pets/1",
+							"host": [
+								"{{url_dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate csv",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url_dev}}/api/v1/generate_csv.csv?medicine=sint&birthday_date=19/01/2014",
+							"host": [
+								"{{url_dev}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"generate_csv.csv"
+							],
+							"query": [
+								{
+									"key": "medicine",
+									"value": "sint"
+								},
+								{
+									"key": "birthday_date",
+									"value": "19/01/2014"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
